@@ -30,8 +30,7 @@ def example_post():
     # Exécuter la requête d'insertion
     sql = "INSERT INTO utilisateur (email, pass) VALUES (%s, %s)"
     values = (email, passe)
-    d = cursor.execute(sql, values)
-    print(str(d)+" valeur")
+    cursor.execute(sql, values)
     
 
     # Valider la transaction
